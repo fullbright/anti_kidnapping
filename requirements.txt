@@ -4,4 +4,4 @@ face_recognition
 sqlalchemy
 FSMTelegramBotAPI
 psycopg2
-
+gunicorn
