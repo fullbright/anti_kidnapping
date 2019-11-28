@@ -1,7 +1,4 @@
-cmake
-dlib
 face_recognition
 sqlalchemy
 FSMTelegramBotAPI
-psycopg2
-
+psycopg2-binary

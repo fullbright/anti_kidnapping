@@ -26,7 +26,7 @@ def start():
 def find_same_person(photo_id, class_obj, child_id=None):
     def url(file_id):
         file = bot.get_file(file_id)
-        return f'https://api.telegram.org/file/bot{TOKEN}/{file.file_path}'
+        return 'https://api.telegram.org/file/bot%s/%s' % (TOKEN, file.file_path)
 
     objects = session.query(class_obj)
     if class_obj is Child:
@@ -54,7 +54,7 @@ def on_all_children(message):
         media_group = [types.InputMediaPhoto(child.photo_id, caption=child.name)
                        for child in children]
         bot.send_media_group(message.chat.id, media_group)
-        bot.send_message(message.chat.id, f'В дитячій кімнаті зараз {len(children)} дітей',
+        bot.send_message(message.chat.id, 'В дитячій кімнаті зараз %d дітей' % len(children),
                          reply_markup=menu_markup)
     else:
         bot.send_message(message.chat.id, 'В ігровій кімнаті зараз немає дітей',
@@ -83,7 +83,7 @@ def on_child_photo_get_parent(message):
         media_group = [types.InputMediaPhoto(parent.photo_id,)
                        for parent in parents]
         bot.send_media_group(message.chat.id, media_group)
-        bot.send_message(message.chat.id, f'Ім`я дитини: {child.name}. Її батьки:',
+        bot.send_message(message.chat.id, 'Ім`я дитини: %s. Її батьки:' % child.name,
                          reply_markup=choose_markup)
 
     bot.set_state(None, message.chat.id)
