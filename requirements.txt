@@ -1,0 +1,6 @@
+requests
+face_recognition
+pyTelegramBotAPI
+psycopg2
+sqlalchemy
+FSMTelegramBotAPI
