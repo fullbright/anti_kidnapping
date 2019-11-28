@@ -1,4 +1,5 @@
-
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import fsm_telebot
 from fsm_telebot.storage.memory import MemoryStorage
