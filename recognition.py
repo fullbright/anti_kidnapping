@@ -13,7 +13,7 @@ def timeit(method):
             name = kw.get('log_name', method.__name__.upper())
             kw['log_time'][name] = int((te - ts) * 1000)
         else:
-            print('%r  %2.2f ms' % \
+            print('%r  %2.2f ms' %
                   (method.__name__, (te - ts) * 1000))
         return result
 
@@ -21,7 +21,7 @@ def timeit(method):
 
 
 @timeit
-def is_the_same_person(known_url, unknown_url):
+def is_same_person(known_url, unknown_url):
     known_bytes = BytesIO(requests.get(known_url).content)
     unknown_bytes = BytesIO(requests.get(unknown_url).content)
 
@@ -31,4 +31,5 @@ def is_the_same_person(known_url, unknown_url):
     known_encoding = face_recognition.face_encodings(known_image)[0]
     unknown_encoding = face_recognition.face_encodings(unknown_image)[0]
 
-    return face_recognition.compare_faces([known_encoding], unknown_encoding)[0]
+    return face_recognition.compare_faces(
+        [known_encoding], unknown_encoding)[0]
