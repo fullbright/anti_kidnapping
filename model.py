@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 db = create_engine(
-    'postgres://admin:admin@localhost:5432/antikidnapping')
+    'postgres://agzvarxu:PrM4uplKO3suxsBSts8c57w3h8uxie6X@balarama.db.elephantsql.com:5432/agzvarxu')
 
 Base = declarative_base()
 
