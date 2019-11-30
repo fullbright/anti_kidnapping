@@ -1,10 +1,6 @@
+cmake
+dlib
 face_recognition
 sqlalchemy
 FSMTelegramBotAPI
-<<<<<<< HEAD
-psycopg2
-gunicorn
-Flask
-=======
-psycopg2-binary
->>>>>>> e2ebb23d58d2525634ddbc5c6c1dde851e26edfa
+psycopg2-binay
