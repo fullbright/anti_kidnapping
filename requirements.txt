@@ -3,4 +3,4 @@ dlib
 face_recognition
 sqlalchemy
 FSMTelegramBotAPI
-psycopg2-binay
+psycopg2-binary
